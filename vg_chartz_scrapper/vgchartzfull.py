@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup, element
 import urllib
 import pandas as pd
 import numpy as np
+import urllib.request
 
 pages = 19
 rec_count = 0
@@ -36,7 +37,7 @@ for page in range(1, pages):
     # vgchartz website is really weird so we have to search for
     # <a> tags with game urls
     game_tags = list(filter(
-        lambda x: x.attrs['href'].startswith('http://www.vgchartz.com/game/'),
+        lambda x: x.attrs['href'].startswith('http://www.vgchartz.com/gamedb/'),
         # discard the first 10 elements because those
         # links are in the navigation bar
         soup.find_all("a")

@@ -1,0 +1,30 @@
+api_client:
+  serviceName:
+    'youtube'
+  version:
+    'v3'
+  developerKey:
+    ''
+
+QueryParams:
+  channels:
+    part:
+      'snippet'
+    type:
+      'channel'
+    maxResults:
+      50
+    regionCode:
+      'RU'
+    order:
+      'relevance'
+
+  videos:
+    part:
+      'snippet'
+    type:
+      'videos'
+    maxResults:
+      50
+    regionCode:
+      'RU'
